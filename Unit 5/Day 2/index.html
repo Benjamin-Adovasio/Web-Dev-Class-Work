@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo List</title>
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <link rel="stylesheet" href="stylesheets/lib/dismissible.css">
+  <link href="stylesheets/lib/lineicons.css" rel="stylesheet"> <!--Lineicons not working when used directly. Using below cdn instead. -->
+  <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+  <script type="module" src="js/lib/md-block.js"></script>
+</head>
+<header>
+  <div id="dismissible-container"></div>
+  <h1>Todo-List Project</h1>
+  <h2>Intro to Computer Programing</h2>
+  <h3>See footer for more info</h3>
+</header>
+<body>
+  <main class="app">
+    <section class="greeting">
+      <h2 class="title">
+        Todo List for: <input type="text" id="name" placeholder="Name here" onkeypress="enterKeyPressed(event)"/>
+      </h2>
+      <h3>Press enter to save name</h3>
+    </section>
+    <section class="create-todo">
+      <h3>CREATE A TASK</h3>
+      <form id="new-todo-form">
+        <h4>What have you been pushing off?</h4>
+        <input type="text" placeholder="e.g. Clean Room" name="content" id="content" />
+        <h4>Pick a level of priority</h4>
+        <div class="options">
+          <label>
+            <input type="radio" name="category" id="category1" value="important" />
+            <span class="bubble important"></span>
+            <div>Important</div>
+          </label>
+          <label>
+            <input type="radio" name="category" id="category2" value="later" />
+            <span class="bubble later"></span>
+            <div>I'll do it later</div>
+          </label>
+        </div>
+        <input type="button" value="Add todo" id="submit" onclick="submission()"/>
+        <section class="todo-list">
+          <div class="list" id="todo-list"></div>
+          <table id="todoTable">
+            <thead>
+              <tr>
+                <th>Todo List:</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </section>
+        <h4>Extra options</h4>
+        <div class="options">
+          <label>
+            <input type="button" name="category" id="cmd" onclick="renderPDF()" />
+
+            <div>Print Todo List</div>
+          </label>
+
+          <label>
+            <input type="button" name="full-screen" id="full-screen" onclick='window.open(href="todoOnly.html")' />
+            <div>Open Todo-List Viewer</div>
+          </label>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <script src="js/lib/dismissible.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/submission.js"></script>
+</body>
+<footer>
+  <p>&copy Benjamin Adovasio 2022. See the <a href='README.html'>README file </a> for more information.</p>
+
+</footer>
+
+</html>

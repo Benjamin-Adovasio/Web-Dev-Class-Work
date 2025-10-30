@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo List</title>
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <link rel="stylesheet" href="stylesheets/lib/dismissible.css">
+  <link href="stylesheets/lib/lineicons.css" rel="stylesheet"> <!--Lineicons not working when used directly. Using below cdn instead. -->
+  <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+  <script type="module" src="js/lib/md-block.js"></script>
+</head>
+<header>
+  <h1>This is a viewer for your todo-list</h1>
+  <h2>The content on this page is view only</h2>
+  <h3>This page will refresh automatically every 5 seconds. See footer for more info.</h3>
+</header>
+<body>
+  <main class="app">
+    <section class="greeting">
+      <h2 class="title">
+        Todo List for: <h2 id="nameForTodoOnly"></h2>
+      </h2>
+    </section>
+    <section class="create-todo">
+        <section class="todo-list">
+          <div class="list" id="todo-list"></div>
+          <table id="todoTableReadOnly">
+            <thead>
+              <tr>
+                <th>Todo List:</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </section>
+      </form>
+    </section>
+
+  </main>
+
+  <script src="js/viewOnly.js"></script>
+</body>
+<footer>
+    <p>&copy Benjamin Adovasio 2022. See the <a href='README.html'>README file </a> for more information.</p>
+
+</footer>
+
+</html>

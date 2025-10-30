@@ -1,0 +1,16 @@
+// BASIC:
+// 1. Create an array of at least three items.
+// 2. Prompt the user the add an item to your array at the end.
+// 3. Display this array, with your new item, on your document, using the join() method to make all items one String
+
+// INTERMEDIATE:
+// 1. Create an input element and a button.
+// 2. The user should input what element they want to add to the array and click the button.
+// 3. The item should be added to a random spot in the array.
+// 4. The array should then be displayed on the document.
+
+// ADVANCED:
+// 1. Create a To Do List, where the user can input any item they want in an input element and display that item in a numbered list on the document.
+// 2. Create another input element where the user can input a number on the ordered list of the element they want to delete.
+// 3. When an element is added or deleted, the list should be updated with all the elements in the array at that time.
+// 4. Numbers should be in order and updated, i.e. if there are items 1, 2, and 3, and the user deletes item 2, item 3 should now be numbered 2, and item 1 remains the same.

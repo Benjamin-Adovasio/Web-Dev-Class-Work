@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo List</title>
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <link rel="stylesheet" href="stylesheets/lib/dismissible.css">
+  <link href="stylesheets/lib/lineicons.css" rel="stylesheet"> <!--Lineicons not working when used directly. Using below cdn instead. -->
+  <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+  <script type="module" src="js/lib/md-block.js"></script>
+</head>
+<header>
+  <div id="dismissible-container"></div>
+  <h1>Todo-List Project</h1>
+  <h2>Intro to Computer Programing</h2>
+  <h3 class="help">See footer for more info</h3>
+  <input type="button" id="help" value="Toggle Help" onclick="toggleHelp()"/><br>
+  <hr>
+</header>
+<body>
+  <main class="app">
+    <section class="greeting">
+      <h3 class="help">Step 1: Add your name</h3>
+      <h2 class="title">
+        Todo List for: <input type="text" id="name" placeholder="Name here" onkeypress="enterKeyPressed(event)"/>
+      </h2>
+      <h3 class="help">Press enter to continue</h3>
+    </section>
+    <section class="create-todo">
+      <h3 class="help">Step 2: Create a task</h3>
+      <h2>CREATE A TASK</h2>
+        <input type="text" placeholder="e.g. Clean Room" name="content" id="content" onclick="enterKeyPressedTask(event)" />
+        <h3 class="help">Press enter to continue</h3>
+        <br><br>
+        <h3 class="help">Step 3: Select a priority</h3>
+        <h2>Pick a level of priority</h2>
+        <div class="options">
+          <label>
+            <input type="radio" name="category" id="category1" value="important" />
+            <span class="bubble important"></span>
+            <div>Important</div>
+          </label>
+          <label>
+            <input type="radio" name="category" id="category2" value="later" />
+            <span class="bubble later"></span>
+            <div>I'll do it later</div>
+          </label>
+        </div><br>
+        <h3 class="help">Step 4: Submit!</h3>
+        <input type="button" value="Add todo" id="submit" onclick="submission()"/>
+        <section class="todo-list">
+          <div class="list" id="todo-list"></div>
+          <table id="todoTable">
+            <thead>
+              <tr>
+                <th>Todo List:</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </section>
+        <h3 class="help">Step 5: Extra options</h3>
+        <h4>Extra options</h4>
+        <div class="options">
+          <label>
+            <input type="button" name="category" id="cmd" onclick="todoViewer('tab')" />
+
+            <div>Open Todo-List Viewer in New Tab</div>
+          </label>
+
+          <label>
+            <input type="button" name="full-screen" id="full-screen" onclick="todoViewer('popup')"/>
+            <div>Open Todo-List Viewer in Popup</div>
+          </label>
+        </div>
+    </section>
+
+  </main>
+
+  <script src="js/lib/dismissible.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/submission.js"></script>
+</body>
+<footer>
+  <p>&copy Benjamin Adovasio 2022. See the <a href='README.html'>README file </a> for more information.</p>
+
+</footer>
+
+</html>
